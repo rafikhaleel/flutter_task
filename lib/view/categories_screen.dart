@@ -37,7 +37,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
 
       return apiList;
     } else {
-      throw Exception('Error fetching categories');
+      throw Exception('Error:failed to fetch categories');
     }
   }
 
