@@ -60,7 +60,7 @@ class _CategoryProductsScreenState extends State<CategoryProductsScreen> {
         filteredList = data;
       });
     } catch (e) {
-      print('Error fetching data: $e');
+      debugPrint('Error: failed to fetch data: $e');
     }
   }
 

@@ -40,10 +40,11 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
-            onPressed: (){
-              Navigator.of(context).pop();
-            },
-            icon: Icon(Icons.arrow_back_ios)),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: Icon(Icons.arrow_back_ios),
+        ),
         title: Text(
           "Product Details",
           style: GoogleFonts.playfairDisplay(
@@ -92,8 +93,7 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                     height: height * .25,
                     width: width * .8,
                     placeholder:
-                        (context, url) =>
-                            SpinKitCircle(color: Colors.black),
+                        (context, url) => SpinKitCircle(color: Colors.black),
                     errorWidget:
                         (context, url, error) =>
                             Icon(Icons.error, color: Colors.red),
@@ -118,29 +118,21 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                               ? Icons.favorite
                               : Icons.favorite_border,
                           size: 30,
-                          color: favouriteProvider.isFavourite(api.id!)
-                              ? Colors.red
-                              : Colors.black,
+                          color:
+                              favouriteProvider.isFavourite(api.id!)
+                                  ? Colors.red
+                                  : Colors.black,
                         ),
                       ),
                     ],
                   ),
-                  TextWidget(
-                    title: 'Name',
-                    value: api.title ?? 'Not Exist',
-                  ),
-                  TextWidget(
-                    title: 'Price',
-                    value: api?.price.toString() ?? 'Not Exist',
-                  ),
+                  TextWidget(title: 'Name', value: api.title ?? 'Not Exist'),
+                  TextWidget(title: 'Price', value: api.price.toString()),
                   TextWidget(
                     title: 'Category',
                     value: api?.category ?? 'Not Exist',
                   ),
-                  TextWidget(
-                    title: 'Brand',
-                    value: api?.brand ?? 'Not Exist',
-                  ),
+                  TextWidget(title: 'Brand', value: api?.brand ?? 'Not Exist'),
                   TextWidget(
                     title: 'Brand',
                     value:
@@ -169,25 +161,20 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                                   color: Colors.black,
                                 ),
                               ),
-                              ...List.generate(leftImages.length, (
-                                index,
-                              ) {
+                              ...List.generate(leftImages.length, (index) {
                                 return Column(
                                   children: [
                                     SizedBox(height: height * .018),
                                     Container(
                                       width: width * .42,
                                       height: height * .12,
-                                      color: Colors.brown.withOpacity(
-                                        .25,
-                                      ),
+                                      color: Colors.brown.withValues(alpha: .25),
                                       child: CachedNetworkImage(
                                         imageUrl: leftImages[index],
                                         placeholder:
-                                            (context, url) =>
-                                                SpinKitCircle(
-                                                  color: Colors.black,
-                                                ),
+                                            (context, url) => SpinKitCircle(
+                                              color: Colors.black,
+                                            ),
                                         errorWidget:
                                             (context, url, error) => Icon(
                                               Icons.error,
@@ -205,24 +192,21 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                         Flexible(
                           child: ListView(
                             children: [
-                              ...List.generate(rightImages.length, (
-                                index,
-                              ) {
+                              ...List.generate(rightImages.length, (index) {
                                 return Column(
                                   children: [
                                     Container(
                                       width: width * .42,
                                       height: height * .12,
-                                      color: Colors.brown.withOpacity(
-                                        .25,
+                                      color: Colors.brown.withValues(
+                                        alpha: .25,
                                       ),
                                       child: CachedNetworkImage(
                                         imageUrl: rightImages[index],
                                         placeholder:
-                                            (context, url) =>
-                                                SpinKitCircle(
-                                                  color: Colors.black,
-                                                ),
+                                            (context, url) => SpinKitCircle(
+                                              color: Colors.black,
+                                            ),
                                         errorWidget:
                                             (context, url, error) => Icon(
                                               Icons.error,

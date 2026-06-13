@@ -91,7 +91,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                             width: 85,
                             height: 85,
                             decoration: BoxDecoration(
-                              color: Colors.brown.withOpacity(.15),
+                              color: Colors.brown.withValues(alpha: .15),
                               shape: BoxShape.circle,
                             ),
                             child: CachedNetworkImage(

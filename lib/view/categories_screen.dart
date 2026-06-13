@@ -52,7 +52,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
         }
       }
     } catch (e) {
-      print('Image fetch error: $e');
+      debugPrint('Image fetch error: $e');
     }
     return null;
   }
@@ -143,7 +143,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                             child: Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
-                                color: Colors.brown.withOpacity(.5),
+                                color: Colors.brown.withValues(alpha: 0.5),
                               ),
                               child: Stack(
                                 children: [
