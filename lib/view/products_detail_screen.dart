@@ -130,21 +130,21 @@ class _ProductsDetailScreenState extends State<ProductsDetailScreen> {
                   TextWidget(title: 'Price', value: api.price.toString()),
                   TextWidget(
                     title: 'Category',
-                    value: api?.category ?? 'Not Exist',
+                    value: api.category ?? 'Not Exist',
                   ),
-                  TextWidget(title: 'Brand', value: api?.brand ?? 'Not Exist'),
+                  TextWidget(title: 'Brand', value: api.brand ?? 'Not Exist'),
                   TextWidget(
                     title: 'Brand',
                     value:
-                        api?.rating != null
-                            ? '${api?.rating.toString()}   ⭐ ⭐ ⭐ ⭐'
+                        api.rating != null
+                            ? '${api.rating.toString()}   ⭐ ⭐ ⭐ ⭐'
                             : 'Not Exist',
                   ),
                   TextWidget(
                     title: 'Description',
                     value:
-                        api?.rating != null
-                            ? '\n${api?.description.toString()}'
+                        api.rating != null
+                            ? '\n${api.description.toString()}'
                             : 'Not Exist',
                   ),
                   Flexible(

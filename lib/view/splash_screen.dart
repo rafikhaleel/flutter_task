@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_task/view/bottom_navigation_bar.dart';
-import 'package:flutter_task/view/products_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

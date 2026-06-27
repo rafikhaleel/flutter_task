@@ -84,7 +84,7 @@ class Products {
     id = json['id'];
     title = json['title'];
     description = json['description'];
-    category = json['category'];
+    category = json['category'] ?? "Not Exist";
     price = (json['price'] ?? 0).toDouble();
     discountPercentage = (json['discountPercentage'] as num).toDouble();
     rating = (json['rating'] as num).toDouble();
